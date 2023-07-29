@@ -9,6 +9,11 @@ def signup(request):
 def login(request):
     return Response({})
 
-@api_view(["POST"])
+@api_view(["GET"])
 def test_token(request):
-    return Response({})
+    return Response(
+        {
+            "status" : True,
+            "msg" : "Welcome to Authentication Test App"
+        }
+    )
